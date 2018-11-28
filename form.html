@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Конкурс на самую радужную фотографию</title>
+  <link rel="stylesheet" href="css/style.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="page-header">
+    <div class="page-header__wrapper  page-header__wrapper--photo">
+      <div class="page-header__container">
+
+        <div class="main-nav__wrapper">
+          <a class="main-nav__link-logo" href="index.html">
+            <img src="img/logo-light.svg" alt="Логотип Rainbow" width="180">
+          </a>
+          <button class="main-nav__toggle">Кнопка переключения меню</button>
+        </div>
+
+        <nav class="main-nav  main-nav--active">
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="index.html" class="main-nav__link">Главная</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="photo.html" class="main-nav__link">Фотографии</a>
+            </li>
+            <li class="main-nav__item">
+              <a class="main-nav__link  main-nav__link--active">Конкурс</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <h1 class="page-header__heading">Конкурс на самую радужную фотографию</h1>
+  </header>
+
+  <main>
+
+    <section class="form">
+
+      <h2 class="intro-text__content  intro-text__content--form">Каждый месяц мы проводим конкурс на самую яркую, глубокую и интересную фотографию. Вылаживай свое фото и получи возможность выиграть смартфон Apple iPhone XR 256GB. Чтобы учавствовать в конкурсе, заполните форму</h2>
+
+      <form class="form__index" action="#" method="post">
+
+        <fieldset class="form__person">
+          <div class="field-text">
+            <label class="field-text__label" for="surname">Фамилия:</label>
+            <input class="field-text__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию *"
+              required>
+          </div>
+          <div class="field-text">
+            <label class="field-text__label" for="name">Имя:</label>
+            <input class="field-text__input" type="text" name="name" id="name" placeholder="Введите ваше имя *"
+              required>
+          </div>
+          <div class="field-text">
+            <label class="field-text__label" for="patronymic">Отчество:</label>
+            <input class="field-text__input" type="text" name="patronymic" id="patronymic" placeholder="Ну и отчество тоже ">
+          </div>
+        </fieldset>
+
+        <fieldset class="form__season">
+          <div class="form__season-wrapper">
+            <legend class="form__legend  form__legend--season">Выберите время, когда было сделано фото</legend>
+            <div class="field-radio">
+              <input class="field-radio__input" type="radio" name="radio" id="radio-1" value="ios" checked>
+              <label class="field-radio__label" for="radio-1">Зима</label>
+            </div>
+            <div class="field-radio">
+              <input class="field-radio__input" type="radio" name="radio" id="radio-2" value="android">
+              <label class="field-radio__label" for="radio-2">Весна</label>
+            </div>
+            <div class="field-radio">
+              <input class="field-radio__input" type="radio" name="radio" id="radio-3" value="wphone">
+              <label class="field-radio__label" for="radio-3">Лето</label>
+            </div>
+            <div class="field-radio">
+              <input class="field-radio__input" type="radio" name="radio" id="radio-4" value="wphone">
+              <label class="field-radio__label" for="radio-4">Осень</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__contacts">
+          <legend class="form__legend  form__legend--contacts">Контактная информация</legend>
+          <div class="form__contacts-wrapper">
+
+            <div class="field-tel">
+              <input class="field-tel__input" type="tel" name="tel" id="tel" placeholder="Номер, пожалуйста">
+              <br>
+              <label class="field-tel__label" for="tel">Номер телефона</label>
+            </div>
+
+            <div class="field-email">
+              <div class="field-email__icon">
+                <input class="field-email__input" type="email" name="email" id="email" placeholder="Введите почту *"
+                  required>
+              </div>
+              <label class="field-email__label" for="email">Адрес почты</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__achievements">
+          <div class="form__achievements-wrapper">
+            <legend class="form__legend  form__legend--achievements">Немного информации о вас.<br> Отметьте галочкой пункты, которые вы делали</legend>
+
+            <div class="form__achievements-container">
+              <div class="field-checkbox">
+                <input class="field-checkbox__input" type="checkbox" name="check-1" id="check-1" checked>
+                <label class="field-checkbox__label" for="check-1">Прыгали с парашютом</label>
+              </div>
+              <div class="field-checkbox">
+                <input class="field-checkbox__input" type="checkbox" name="check-2" id="check-2"  checked>
+                <label class="field-checkbox__label" for="check-2">Говорили с иностранцем</label>
+              </div>
+              <div class="field-checkbox">
+                <input class="field-checkbox__input" type="checkbox" name="check-3" id="check-3">
+                <label class="field-checkbox__label" for="check-3">Делали селфи со звездой</label>
+              </div>
+              <div class="field-checkbox">
+                <input class="field-checkbox__input" type="checkbox" name="check-4" id="check-4">
+                <label class="field-checkbox__label" for="check-4">Видели НЛО</label>
+              </div>
+              <div class="field-checkbox">
+                <input class="field-checkbox__input" type="checkbox" name="check-5" id="check-5"  checked>
+                <label class="field-checkbox__label" for="check-5">Заказывали такси</label>
+              </div>
+              <div class="field-checkbox">
+                <input class="field-checkbox__input" type="checkbox" name="check-6" id="check-6">
+                <label class="field-checkbox__label" for="check-6">Валялись в грязи</label>
+              </div>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset class="form__comment">
+          <legend class="form__legend  form__legend--comment">Опишите фотографию несколькими предложениями</legend>
+          <div class="field-textarea">
+            <label class="field-textarea__label" for="message"></label>
+            <textarea class="field-textarea__textarea" name="message" id="message" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+          </div>
+        </fieldset>
+
+        <div class="form__button-wrapper">
+          <button class="btn  btn__form" type="submit">Отправить форму</button>
+          <p class="form__important-field">* - обязательные <span>для заполнения</span> поля</p>
+        </div>
+
+      </form>
+
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__logo">
+      <a class="page-footer__logo-link" href="index.html">
+        <img class="page-footer__logo-img" src="img/logo-dark.svg" alt="Логотип rainbow" width="180">
+      </a>
+    </div>
+
+    <div class="page-footer__social">
+      <a class="page-footer__link" href="https://twitter.com">Twitter
+        <svg class="page-footer__img-twitter">
+          <use xlink:href="img/sprite.svg#icon-twitter"></use>
+        </svg>
+      </a>
+      <a class="page-footer__link  page-footer__link--fb" href="https://facebook.com/">Facebook
+        <svg class="page-footer__img-facebook">
+          <use xlink:href="img/sprite.svg#icon-fb"></use>
+        </svg>
+      </a>
+      <a class="page-footer__link  page-footer__link--youtube" href="https://www.youtube.com/">Youtube
+        <svg class="page-footer__img-youtube">
+          <use xlink:href="img/sprite.svg#icon-youtube"></use>
+        </svg>
+      </a>
+    </div>
+
+    <div class="page-footer__development">
+      <a class="page-footer__development-link" href="https://vk.com/safronman">
+        <img class="page-footer__development-img" src="img/developer.svg" width="200" alt="Сафронов Валерий">
+      </a>
+    </div>
+  </footer>
+
+  <!-- MENU -->
+  <script src="js/menu.js"></script>
+
+  <!-- SVG for everybody -->
+  <script src="js/vendor/svg4everybody.js"></script>
+</body>
+</html>
