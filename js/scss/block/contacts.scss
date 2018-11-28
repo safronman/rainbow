@@ -1,0 +1,110 @@
+.contacts__container {
+  @include container();
+}
+
+.contacts__item {
+  width: 300px;
+
+  text-align: center;
+}
+
+.contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contacts__title {
+  display: block;
+  margin-bottom: 24px;
+
+  font-weight: bold;
+}
+
+.contacts__value {
+  margin: 0;
+
+  font-weight: 300;
+  font-size: 24px;
+  color: $pink;
+  text-decoration: none;
+
+  &--mail {
+    &:hover {
+      color: $dark-blue;
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $dark-blue-30;
+      text-decoration: none;
+    }
+  }
+}
+
+.contacts__map {
+  position: relative;
+
+  width: 100%;
+  height: 500px;
+  margin-bottom: 50px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    z-index: 100;
+
+    width: 100%;
+    height: 165px;
+
+    background: url(../img/white-triangle.svg) no-repeat;
+    background-position: top center;
+  }
+}
+
+/* Запасной план, если api-maps.yandex.ru не загрузилось*/
+#ya-maps {
+  width: 100%;
+  height: 500px;
+
+  background: #ffffff url(../img/map.png) no-repeat;
+  background-position: center;
+  background-size: auto;
+}
+
+
+
+@media (max-width: 1200px) {
+  .contacts__list {
+    align-items: center;
+  }
+
+  .contacts__item {
+    margin-bottom: 15px;
+  }
+
+  .contacts__item--address {
+    order: 1;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  .contacts__title {
+    margin-bottom: 5px;
+  }
+
+  .contacts__value {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .contacts__map {
+    height: 300px;
+    margin-bottom: 30px;
+  }
+
+  #ya-maps {
+    height: 300px;
+  }
+}

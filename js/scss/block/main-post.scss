@@ -1,0 +1,145 @@
+.main-post {
+  margin-bottom: 50px;
+}
+
+.main-post__photo {
+  width: 100%;
+  height: 600px;
+
+  background: url(../img/panorama.jpg) no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+.main-post__label {
+  position: relative;
+
+  @include container();
+
+  &::after {
+    content: "Фото дня";
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    width: 140px;
+    height: 36px;
+
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 36px;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+
+    background-color: $pink;
+  }
+}
+
+.main-post__content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 30px;
+
+  background-color: $light-grey;
+
+  @include container();
+}
+
+.main-post__inner {
+  width: 80%;
+  padding-bottom: 30px;
+}
+
+.main-post__author {
+  margin: 0;
+
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.main-post__time {
+  font-weight: 300;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.main-post__like {
+  position: relative;
+
+  margin: 0;
+  padding-right: 25px;
+
+  font-size: 12px;
+  line-height: 24px;
+  color: $pink;
+  text-transform: uppercase;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    right: 0;
+
+    width: 14px;
+    height: 12px;
+
+    background: url(../img/icons/icon-heart.svg) no-repeat center;
+  }
+}
+
+.main-post__text {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 24px;
+}
+
+
+
+@media (max-width: 1200px) {
+  .main-post__photo {
+    height: 400px;
+  }
+
+  .main-post__content {
+    box-sizing: border-box;
+    padding-top: 30px;
+  }
+
+  .main-post__inner {
+    width: 100%;
+  }
+
+  .main-post__like {
+    padding-bottom: 25px;
+  }
+}
+
+
+
+@media (max-width: 700px) {
+  .main-post__photo {
+    height: 300px;
+  }
+
+  .main-post__label::after {
+    top: 0;
+    right: 20px;
+  }
+
+  .main-post__content {
+    padding-top: 20px;
+  }
+
+  .main-post__like {
+    order: 1;
+    padding: 0 0 20px 25px;
+
+    &::after {
+      left: 0;
+    }
+  }
+}

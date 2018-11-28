@@ -1,0 +1,30 @@
+@import "../css/vendor/slick/slick.css";
+@import "../css/vendor/slick/slick-theme.css";
+
+@import "normalize";
+@import "variable.scss";
+@import "common.scss";
+@import "mixin.scss";
+
+@import "block/main-nav.scss";
+@import "block/page-header.scss";
+@import "block/first-display.scss";
+@import "block/advantages.scss";
+@import "block/info.scss";
+@import "block/reviews.scss";
+@import "block/price.scss";
+@import "block/contacts.scss";
+@import "block/page-footer.scss";
+@import "block/slick-theme.scss";
+@import "block/intro-text.scss";
+@import "block/main-post.scss";
+@import "block/post.scss";
+@import "block/upload.scss";
+@import "block/btn.scss";
+@import "block/form.scss";
+@import "block/field-text.scss";
+@import "block/field-tel.scss";
+@import "block/field-email.scss";
+@import "block/field-radio.scss";
+@import "block/field-checkbox.scss";
+@import "block/field-textarea.scss";

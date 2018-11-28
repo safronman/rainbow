@@ -1,0 +1,35 @@
+.field-textarea__textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 816px;
+  height: 124px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 25px 0 0 20px;
+
+  border: 2px solid $light-grey;
+
+  &::placeholder {
+    color: $dark-blue;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .field-textarea__textarea {
+    width: 500px;
+    height: 190px;
+    padding-top: 15px;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .field-textarea__textarea {
+    width: 280px;
+    height: 200px;
+    margin-bottom: 0;
+
+    line-height: 25px;
+  }
+}

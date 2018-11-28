@@ -1,0 +1,34 @@
+.slick-dots li button:before {
+  content: "";
+  top: 50%;
+  left: 50%;
+
+  width: 10px;
+  height: 10px;
+  margin: -5px 0 0 -5px;
+
+  background-color: $dark-blue;
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.slick-dots li button:hover:before {
+  opacity: 0.6;
+}
+
+.slick-dots li button:active:before {
+  opacity: 0.1;
+}
+
+.slick-dots li.slick-active {
+  width: 20px;
+  height: 20px;
+
+  border: 1px solid $pink;
+  border-radius: 50%;
+}
+
+.slick-dots li.slick-active button:before {
+  background-color: $pink;
+  opacity: 1;
+}

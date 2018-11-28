@@ -1,0 +1,268 @@
+.form__index {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 120px;
+}
+
+.form__legend {
+  font-size: 14px;
+  line-height: 30px;
+  text-align: center;
+  color: $pink;
+  text-transform: uppercase;
+
+  background-color: white;
+
+  &--season {
+    position: relative;
+    top: -16px;
+
+    margin: 0 30px 10px;
+  }
+
+  &--contacts {
+    margin-bottom: 35px;
+    padding: 0 30px;
+  }
+
+  &--achievements {
+    position: relative;
+    top: -25px;
+
+    margin: 0 240px 20px;
+  }
+
+  &--comment {
+    margin-bottom: 35px;
+    padding: 0 30px;
+  }
+}
+
+.form__person {
+  box-sizing: border-box;
+  width: 436px;
+  padding: 0;
+
+  border: none;
+}
+
+.form__season {
+  width: 426px;
+  margin-bottom: 50px;
+  padding: 0;
+
+  border: 2px solid $light-grey;
+}
+
+.form__contacts {
+  width: 100%;
+  margin-bottom: 70px;
+  padding: 0 55px;
+
+  border: 2px solid $light-grey;
+}
+
+.form__contacts-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.form__achievements {
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 0 0 0 40px;
+
+  border: 2px solid $light-grey;
+}
+
+.form__achievements-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.form__comment {
+  width: 100%;
+  margin-bottom: 50px;
+  padding: 0;
+
+  border: 2px solid $light-grey;
+}
+
+.form__button-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 60px;
+}
+
+
+
+@media (max-width: 1200px) {
+  .form__index {
+    width: 100%;
+    padding: 0;
+  }
+
+  .form__legend {
+    &--season {
+      margin: 0 120px 40px;
+    }
+
+    &--achievements {
+      margin: 0 100px 30px;
+    }
+  }
+
+  .form__person {
+    width: 700px;
+    margin: 0 auto 50px;
+    padding: 0 40px;
+  }
+
+  .form__season {
+    width: 620px;
+    margin: 0 auto 50px;
+  }
+
+  .form__contacts {
+    box-sizing: border-box;
+    width: 620px;
+    margin: 0 auto 50px;
+    padding: 0 60px;
+
+    border: 2px solid $light-grey;
+  }
+
+  .form__contacts-wrapper {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .form__achievements {
+    box-sizing: border-box;
+    width: 620px;
+    margin: 0 auto 40px;
+    padding-left: 0;
+  }
+
+  .form__achievements-container {
+    flex-direction: column;
+  }
+
+  .form__comment {
+    box-sizing: border-box;
+    width: 620px;
+    margin: 0 auto 40px;
+    padding: 0 40px;
+  }
+
+  .form__button-wrapper {
+    box-sizing: border-box;
+    width: 620px;
+    margin: 0 auto 40px;
+  }
+
+  .form__important-field  span {
+    display: none;
+  }
+}
+
+
+@media (max-width: 700px) {
+  .form__legend {
+    line-height: 20px;
+
+    &--season {
+      top: 0;
+
+      margin: 0 20px 30px;
+
+      background-color: $light-grey;
+    }
+
+    &--contacts {
+      display: none;
+    }
+
+    &--comment {
+      margin-bottom: 15px;
+    }
+
+    &--achievements {
+      top: 0;
+
+      margin: 0 20px 30px;
+
+      background-color: $light-grey;
+    }
+  }
+
+  .form__person {
+    order: 1;
+    width: 320px;
+    padding: 0 20px;
+  }
+
+  .form__season {
+    order: 4;
+    width: 100%;
+
+    background-color: $light-grey;
+    border: none;
+  }
+
+  .form__season-wrapper {
+    width: 280px;
+    margin: 0 auto;
+    padding: 30px 20px 0;
+  }
+
+  .form__contacts {
+    order: 3;
+    width: 320px;
+    padding: 0 20px;
+
+    border: none;
+  }
+
+  .form__achievements {
+    order: 2;
+    width: 100%;
+    margin-bottom: 40px;
+
+    background-color: $light-grey;
+    border: none;
+  }
+
+  .form__achievements-wrapper {
+    width: 280px;
+    margin: 0 auto;
+    padding-top: 30px;
+  }
+
+  .form__comment {
+    order: 5;
+    width: 380px;
+    padding: 0 20px;
+
+    border: none;
+  }
+
+  .form__button-wrapper {
+    flex-direction: column;
+    order: 6;
+    width: 320px;
+    padding: 0 20px;
+  }
+
+  .form__important-field {
+    margin: 0;
+
+    text-align: center;
+  }
+}

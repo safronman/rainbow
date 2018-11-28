@@ -1,0 +1,75 @@
+.advantages {
+  margin-bottom: 50px;
+
+  background: url(../img/grey-triangle.svg) no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+}
+
+.advantages__container {
+  text-align: center;
+
+  @include container();
+}
+
+.advantages__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.advantages__item {
+  width: 23%;
+  margin-bottom: 30px;
+}
+
+.advantages__image {
+  width: 220px;
+  margin-bottom: 20px;
+}
+
+.advantages__title {
+  margin: 0;
+
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.advantages__description {
+  text-align: left;
+}
+
+
+
+@media (max-width: 1200px) {
+  .advantages__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 48%;
+  }
+
+  .advantages__image {
+    order: 2;
+    width: 300px;
+  }
+}
+
+
+
+@media (max-width: 700px) {
+  .advantages {
+    margin-bottom: 30px;
+  }
+
+  .advantages__item {
+    width: 100%;
+  }
+
+  .advantages__description {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}

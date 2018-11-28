@@ -1,0 +1,15 @@
+@mixin container() {
+  width: 960px;
+  margin: 0 auto;
+  padding: 0 120px;
+
+  @media (max-width: 1200px) {
+    width: 620px;
+    padding: 0 40px;
+  }
+
+  @media (max-width: 700px) {
+    width: 280px;
+    padding: 0 20px;
+  }
+}
