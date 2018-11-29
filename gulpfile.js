@@ -1,3 +1,6 @@
+// Сборка проекта "gulp build" и слежение за измененными файлами "gulp serve"
+// вызывается командой npm run start (Смотреть package.json)
+
 var gulp = require('gulp');
 var browserSync = require('browser-sync').create();
 var sass = require('gulp-sass');
@@ -10,6 +13,29 @@ var imagemin = require('gulp-imagemin');
 var svgstore = require('gulp-svgstore');
 var runSequence = require('run-sequence');
 var del = require('del');
+
+
+// ------ Сборка проекта BUILD --------
+gulp.task('build', function(callback) {
+  runSequence('clean', 'copy', 'style', 'imagemin', 'sprite', callback);
+});
+
+// Очищаем папку build
+gulp.task('clean', function() {
+  return del('build');
+});
+
+// Копируем все файлы в папку build
+gulp.task('copy', function() {
+  return gulp.src([
+    'img/**',
+    'js/**',
+    '*.html'
+  ], {
+    base: "."
+  })
+  .pipe(gulp.dest('build'));
+});
 
 
 // - Добавление normalize
@@ -28,17 +54,17 @@ gulp.task('style', function () {
     }))
     .pipe(csscomb())
     .pipe(gcmq())
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('build/css'))
     .pipe(csso())
     .pipe(rename('style.min.css'))
-    .pipe(gulp.dest('css'))
+    .pipe(gulp.dest('build/css'))
     .pipe(browserSync.stream());
 });
 
 
 // Минификация изображений png, jpg, gif, svg
 gulp.task('imagemin', function () {
-  return gulp.src('img/**/*')
+  return gulp.src('build/img/**/*')
     .pipe(imagemin([
       imagemin.jpegtran({
         progressive: true
@@ -53,57 +79,39 @@ gulp.task('imagemin', function () {
         ]
       })
     ]))
-    .pipe(gulp.dest('img'));
+    .pipe(gulp.dest('build/img'));
 });
 
 
 // Создание SVG спрайтов
 gulp.task('sprite', function() {
-  return gulp.src('img/sprite/*.svg')
+  return gulp.src('build/img/sprite/*.svg')
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename('sprite.svg'))
-    .pipe(gulp.dest('img'));
+    .pipe(gulp.dest('build/img'));
 });
 
 
-// Автообновление странице при изменении html и css файлов
-gulp.task('serve', ['style'], function() {
+// Автообновление страницы при изменении html и css файлов
+gulp.task('serve', function() {
   browserSync.init({
-    server: "."
+    server: "build/"
   });
 
   gulp.watch('scss/**/*.scss', ['style']);
-  gulp.watch('*.html').on('change', browserSync.reload);
+  gulp.watch('*.html', ['html:update']);
 });
 
+gulp.task("html:copy", function () {
+  return gulp.src("*.html")
+    .pipe(gulp.dest("build"));
+});
 
+gulp.task("html:update", ["html:copy"], function (done) {
+  browserSync.reload();
+  done();
+});
 
-
-
-
-// // Сборка проекта
-// gulp.task('build', function(callback) {
-//   runSequence('style', 'imagemin', 'sprite', callback);
-// });
-
-
-// // Копируем все файлы в папку build
-// gulp.task('copy', function() {
-//   return gulp.src([
-//     'fonts/**/*.{woff,woff2}',
-//     'img/**',
-//     'js/**',
-//     '*.html'
-//   ], {
-//     base: "."
-//   })
-//   .pipe(gulp.dest('build'));
-// });
-
-// // Очищаем папку build
-// gulp.task('clean', function() {
-//   return del('build');
-// });
 
