@@ -1,7 +1,8 @@
-@import "../css/vendor/slick/slick.css";
-@import "../css/vendor/slick/slick-theme.css";
-
 @import "normalize";
+
+@import "vendor/slick/slick.scss";
+@import "vendor/slick/slick-theme.scss";
+
 @import "variable.scss";
 @import "common.scss";
 @import "mixin.scss";
